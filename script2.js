@@ -49,11 +49,9 @@ if (
 } else alert("FALSE");
 
 let year = prompt("Enter year you want to check");
-if (year % 4 == 0 && year % 400 == 0) {
+if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
   alert("This is a leap year");
-} else if (year % 100 != 0) {
-  alert("This is not a leap year");
-}
+} else alert("This is not a leap year");
 
 let number = prompt("Enter 5 digit number");
 if (number[0] == number[4] || number[1] == number[3]) {
